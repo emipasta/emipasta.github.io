@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	const music = new Audio('resources/loopdeloop.ogg');
+	function clickImage()
+	{
+		if (noMore)
+		{
+			const noMore = false;
+			music.loop = true;
+			music.volume = 0.1;
+			music.play();
+		}
+	}
+	function changeImage(img)
+	{
+		document.getElementById("hello").src = "resources/newExhibit.png"
+	}
+</script>
+<style>
+body {
+	background-color: black;
+	overflow:hidden;
+}
+img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.AAAAAAAAAA {
+	width: 100%;
+	visibility:hidden;
+}
+
+</style>
+<title>!!! New Exhibit !!!</title>
+<link rel="icon" href="resources/royboticon.png">
+<body onclick="clickImage()" onload="noMore = true">
+
+<image src="resources/black.jpg" class=AAAAAAAA id=hello onclick="changeImage(this)">
+</body>
+</head>
+</html>
