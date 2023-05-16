@@ -7,15 +7,25 @@
 	{
 		if (noMore)
 		{
-			const noMore = false;
+			noMore = false;
 			music.loop = true;
 			music.volume = 0.1;
 			music.play();
+			changeImage();
+			document.body.style.cursor = "auto";
 		}
 	}
-	function changeImage(img)
+	function changeImage()
 	{
-		document.getElementById("hello").src = "resources/NewExhibit.png"
+		document.getElementById("hello").src = "resources/NewExhibit.png";
+	}
+	
+	function load()
+	{
+		noMore = true;
+		var img=new Image();
+		img.src="resources/NewExhibit.png";
+		document.body.style.cursor = "pointer";
 	}
 </script>
 <style>
@@ -38,9 +48,9 @@ img {
 </style>
 <title>!!! New Exhibit !!!</title>
 <link rel="icon" href="resources/royboticon.png">
-<body onclick="clickImage()" onload="noMore = true">
+<body onclick="clickImage()" onload="load();">
 
-<image src="resources/black.jpg" class=AAAAAAAA id=hello onclick="changeImage(this)">
+<image src="resources/black.jpg" class=AAAAAAAA id=hello onclick=" ">
 </body>
 </head>
 </html>
